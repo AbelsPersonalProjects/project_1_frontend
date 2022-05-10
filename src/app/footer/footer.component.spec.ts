@@ -22,4 +22,12 @@ describe('FooterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should contiain 'Abel Asres' as creator`, () => {
+    expect(component.creator).toBe('Abel Asres');
+  });
+
+  it(`should have appName as blank`, () => {
+    expect(component.appName).toBe('');
+  });
 });
