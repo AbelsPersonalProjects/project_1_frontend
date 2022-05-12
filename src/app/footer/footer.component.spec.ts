@@ -30,4 +30,8 @@ describe('FooterComponent', () => {
   it(`should have appName as blank`, () => {
     expect(component.appName).toBe('');
   });
+
+  it(`should have gitHub link as 'https://github.com/AbelsPersonalProjects/project_1_frontend'`, () => {
+    expect(component.gitHub).toBe('https://github.com/AbelsPersonalProjects/project_1_frontend');
+  });
 });

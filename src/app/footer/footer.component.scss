@@ -1,13 +1,11 @@
 .footer{
-    display: flex;
-    justify-content: center;
     background-color: rgba(79,118,223);
-    margin-top: 1%;
+    min-height: 100%;
 
-    strong{
+    strong{  
         color: rgba(254, 203, 0, 0.993);
     }
-    
+
     a{
         text-decoration: none;
         color: rgba(254, 203, 0, 0.993);

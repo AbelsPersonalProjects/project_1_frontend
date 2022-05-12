@@ -13,7 +13,7 @@ export class FooterComponent implements OnInit {
   }
 
   creator:string = 'Abel Asres';
-  license:string = 'https://github.com/abelAsres/ExpenseReimbursementSystem';
+  gitHub:string = 'https://github.com/AbelsPersonalProjects/project_1_frontend';
   @Input() appName = '';
 
 }
