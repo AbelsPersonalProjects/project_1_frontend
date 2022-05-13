@@ -1,6 +1,8 @@
 .footer{
     background-color: rgba(79,118,223);
-    min-height: 100%;
+    position: absolute;
+    bottom: 0%;
+    min-width: 100vh;
 
     strong{  
         color: rgba(254, 203, 0, 0.993);
