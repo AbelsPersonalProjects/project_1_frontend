@@ -13,7 +13,7 @@ export class UserService {
   constructor(
     private http: HttpClient) { }
 
-  login(userName: string, password: string):Observable<User>{
-    return this.http.post<User>(this.url+this.loginEndpoint,{ userName,password});
+  login(userName: string, password: string):Observable<any>{
+    return this.http.post<any>(this.url+this.loginEndpoint,{ userName,password }, {observe:'response'});
   }
 }

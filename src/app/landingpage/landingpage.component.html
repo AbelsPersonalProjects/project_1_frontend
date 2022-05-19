@@ -1,39 +1,39 @@
 <div class="container">
     <div class="columns">
         <div class="column">
-                    <form [formGroup] = "loginForm" (ngSubmit)="login()">
-                        <h1 class="title">
-                            Login
-                        </h1>
-                        <div class="box">
-                            <div class="field">
-                                <label>Username</label>
-                                <div class="control">
-                                    <input type="text" class="input" placeholder="Enter Username here" id="user-name" formControlName="username">
-                                        <i class="fas fa-user"></i>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label>Password</label>
-                                <div class="control">
-                                    <input type="password" class="input" placeholder="Enter password here" id="password" formControlName="password">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="control">
-                                    <button type="submit" class="button is-dark is-outlined" [disabled]="!loginForm.valid">
-                                        Sign-In
-                                    </button>
-                                </div> 
-                            </div>
+            <form [formGroup] = "loginForm" (ngSubmit)="login()">
+                <h1 class="title">
+                    Login
+                </h1>
+                <div class="box">
+                    <div class="field">
+                        <label>Username</label>
+                        <div class="control">
+                            <input type="text" class="input" placeholder="Enter Username here" id="user-name" formControlName="username">
+                                <i class="fas fa-user"></i>
                         </div>
-                        <p id="error-msg"></p>
-                    </form>
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <div class="control">
+                            <input type="password" class="input" placeholder="Enter password here" id="password" formControlName="password">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <button type="submit" class="button is-dark is-outlined" [disabled]="!loginForm.valid">
+                                Sign-In
+                            </button>
+                        </div> 
+                        <p #error_msg style="color: red;"></p>
+                    </div>
+                </div>
+            </form>
         </div>
         <div class="column">
-                    <div id="landing-image">
-                        <img src="https://storage.googleapis.com/project-1-images/landingPage.PNG" alt="The Reimbursements" >
-                    </div>
+            <div id="landing-image">
+                <img src="https://storage.googleapis.com/project-1-images/landingPage.PNG" alt="The Reimbursements" >
+            </div>
         </div>
     </div>
 </div>

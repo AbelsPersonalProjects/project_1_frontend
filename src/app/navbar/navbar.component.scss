@@ -1,11 +1,13 @@
 #navigation{
     background-color: rgba(79,118,223);
-    
-    .navbar-item{
-        color: rgba(254, 203, 0, 0.993);    
-    }
+}
 
-    .navbar-item:hover{
-        background-color: blue;
-    }
+.navbar-item:not(:hover){
+    background-color: rgba(79,118,223);
+    color: rgba(254, 203, 0, 0.993);    
+}
+
+.navbar-item:hover{
+    background-color: rgba(254, 203, 0, 0.993);
+    color: rgba(79,118,223);
 }

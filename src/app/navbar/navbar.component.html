@@ -3,14 +3,18 @@
         <a class="navbar-item" id="home" routerLink="/home">
             The Reimbursements
         </a>
-        <a class="navbar-item" id="dashboard" routerLink="/dashboard">
+        <a *ngIf="loggedIn" class="navbar-item" id="dashboard" routerLink="/dashboard">
             Dashboard
         </a>
     </div>
 
     <div class="navbar-end">
-        <a class="navbar-item" id="sign-in" routerLink="/sign-in">
+        <a *ngIf="!loggedIn" class="navbar-item" id="sign-in" routerLink="/sign-up">
             Sign-up
+        </a>
+
+        <a *ngIf="loggedIn" class="navbar-item" id="log-out" (click)= "logout()">
+            Logout
         </a>
     </div>
 </div>

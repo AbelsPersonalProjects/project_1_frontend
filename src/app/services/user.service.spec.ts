@@ -21,7 +21,7 @@ describe('UserService', () => {
     httpTestingController.verify();
   });
 
-  it('should be created', () => {
+  it('should be created', () => {    
     expect(service).toBeTruthy();
   });
 
@@ -37,8 +37,8 @@ describe('UserService', () => {
     const mockUser: User = {id: 1, userName: 'MrPlow', roleId: 1, profilePic: 'pic.png', reimbursements: []};
 
     service.login('MrPlow','password')
-    .subscribe( user => {
-      expect(user).toEqual(mockUser);
+    .subscribe( response => {
+      expect(response.body).toEqual(mockUser);
     });
 
     const req = httpTestingController.expectOne(service.url+service.loginEndpoint);

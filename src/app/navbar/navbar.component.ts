@@ -8,10 +8,28 @@ import { User } from '../models/User.model';
 })
 export class NavbarComponent implements OnInit {
 
-  user!:User;
+  loggedIn!: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.checkIfSignedIn();
   }
 
+  ngDoCheck(): void {
+    this.checkIfSignedIn();
+  }
+
+  checkIfSignedIn(){
+    const jwt = localStorage.getItem('jwt');
+    if( jwt != null ) {
+      this.loggedIn = true;
+    }else {
+      this.loggedIn = false;
+    }
+  }
+
+  logout(){
+    localStorage.clear();
+  }
 }
