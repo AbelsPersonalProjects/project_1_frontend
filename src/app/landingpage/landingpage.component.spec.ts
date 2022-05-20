@@ -13,8 +13,8 @@ describe('LandingpageComponent', () => {
   let mockUserService = jasmine.createSpyObj('UserService',['login']);
   let mockUser: User;
   let router: Router;
-  
- 
+  let store = {};
+  let mockLocalStorage: any;
 
   beforeEach(async () => {
     mockUser = {id: 1, userName: 'MrPlow', roleId: 1, profilePic: 'pic.png', reimbursements: []};
@@ -29,8 +29,7 @@ describe('LandingpageComponent', () => {
   });
 
   beforeEach(() => {
-    let store = {};
-    let mockLocalStorage: any = {
+    mockLocalStorage = {
       getItem: (key: string): string => {
         return key in store ? (store as any)[key] : null;
       },
@@ -84,6 +83,6 @@ describe('LandingpageComponent', () => {
   //   component.loginForm.value.password = 'password';
   //   mockUserService.login.and.returnValue(of(mockUser));
   //   component.login(); 
-  //   expect(localStorage.getItem('userName')).toEqual(mockUser.userName);
+  //   expect(mockLocalStorage.getItem('userName')).toEqual(mockUser.userName);
   // });
 });

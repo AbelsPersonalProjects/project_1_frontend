@@ -14,6 +14,6 @@ export class UserService {
     private http: HttpClient) { }
 
   login(userName: string, password: string):Observable<any>{
-    return this.http.post<any>(this.url+this.loginEndpoint,{ userName,password }, {observe:'response'});
+    return this.http.post<any>(this.url+this.loginEndpoint, { userName,password }, {observe:'response'});
   }
 }
